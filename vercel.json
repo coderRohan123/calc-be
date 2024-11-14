@@ -7,8 +7,8 @@
     }
   ],
   "env": {
-    "GEMINI_API_KEY": "@your-gemini-api-key",
-    "SERVER_URL": "localhost",
+    "GEMINI_API_KEY": "@GEMINI_API_KEY",  // References the environment variable stored in Vercel dashboard
+    "SERVER_URL": "localhost",             // You can still use static values if needed
     "PORT": "8900",
     "ENV": "dev"
   }
