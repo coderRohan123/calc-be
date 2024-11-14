@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "env": {
+    "GEMINI_API_KEY": "@your-gemini-api-key",
+    "SERVER_URL": "localhost",
+    "PORT": "8900",
+    "ENV": "dev"
+  }
+}
