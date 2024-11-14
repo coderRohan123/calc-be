@@ -2,13 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+      "src": "api/index.py",  // The path to the FastAPI entry point
+      "use": "@vercel/python"  // Tells Vercel to use the Python builder for this file
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",  // Route all requests to the FastAPI backend
+      "dest": "/api/index.py"
     }
   ],
   "env": {
-    "GEMINI_API_KEY": "@GEMINI_API_KEY",  // References the environment variable stored in Vercel dashboard
-    "SERVER_URL": "localhost",             // You can still use static values if needed
+    "GEMINI_API_KEY": "@GEMINI_API_KEY",  // Use Vercel's environment variable for your API key
+    "SERVER_URL": "localhost",
     "PORT": "8900",
     "ENV": "dev"
   }
